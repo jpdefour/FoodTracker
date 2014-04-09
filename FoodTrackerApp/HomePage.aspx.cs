@@ -38,7 +38,8 @@ namespace FoodTrackerApp
                 if (strPW.Equals(rowAccounts["password"]))
                 {
                     Label3.Text = "Login Successful.";
-                    Server.Transfer("FoodForm.aspx", true);
+                    //Server.Transfer("FoodForm.aspx", true);
+                    Response.Redirect("FoodForm.aspx");
                 }
                 else
                 {
