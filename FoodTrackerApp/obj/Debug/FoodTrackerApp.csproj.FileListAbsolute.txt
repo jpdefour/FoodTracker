@@ -28,3 +28,33 @@ c:\users\user\documents\visual studio 2012\Projects\FoodTrackerApp\FoodTrackerAp
 c:\users\user\documents\visual studio 2012\Projects\FoodTrackerApp\FoodTrackerApp\obj\Debug\FoodTrackerApp.dll
 c:\users\user\documents\visual studio 2012\Projects\FoodTrackerApp\FoodTrackerApp\obj\Debug\FoodTrackerApp.pdb
 c:\users\user\documents\visual studio 2012\Projects\FoodTrackerApp\FoodTrackerApp\obj\Debug\FoodTrackerApp.csprojResolveAssemblyReference.cache
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\FoodTrackerApp.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\FoodTrackerApp.pdb
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\Antlr3.Runtime.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.Core.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\EntityFramework.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\System.Web.Optimization.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\System.Web.Providers.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\WebGrease.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\EntityFramework.xml
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.Core.xml
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\obj\Debug\FoodTrackerApp.csprojResolveAssemblyReference.cache
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\obj\Debug\FoodTrackerApp.dll
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\obj\Debug\FoodTrackerApp.pdb
