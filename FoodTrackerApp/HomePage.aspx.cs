@@ -18,8 +18,9 @@ namespace FoodTrackerApp
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            String strUserName = lblUsername.Text;
-            String strPassword = lblPassword.Text;
+            String strUserName = boxUsername.Text;
+            String strPassword = boxPassword.Text;
+            
 
             FoodTrackerData.AccountsDataTable dtAccounts = new FoodTrackerData.AccountsDataTable();
 
@@ -37,6 +38,7 @@ namespace FoodTrackerApp
 
                 if (strPassword.Equals(rowAccounts["password"]))
                 {
+                    Session["username"] = strUserName;
                     Response.Redirect("FoodForm.aspx");
                 }
                 else

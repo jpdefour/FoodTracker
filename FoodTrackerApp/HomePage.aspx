@@ -10,13 +10,16 @@
     <form id="LoginForm" runat="server">
     <div>
     
+        Welcome. Please log in.<br />
+        <br />
+    
         <asp:Label ID="lblUsername" runat="server" Text="Username"></asp:Label>
-        <asp:TextBox ID="boxUsername" runat="server"></asp:TextBox>
+        &nbsp;<asp:TextBox ID="boxUsername" runat="server"></asp:TextBox>
         <br />
     
     </div>
         <asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label>
-        <asp:TextBox ID="boxPassword" textmode="Password" runat="server"></asp:TextBox>
+        &nbsp;<asp:TextBox ID="boxPassword" textmode="Password" runat="server"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="Button1_Click" />

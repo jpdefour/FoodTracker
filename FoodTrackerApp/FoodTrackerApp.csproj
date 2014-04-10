@@ -197,6 +197,7 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="HomePage.aspx" />
+    <Content Include="MealsPage.aspx" />
     <Content Include="packages.config" />
     <Content Include="FoodTrackerData.xsc">
       <DependentUpon>FoodTrackerData.xsd</DependentUpon>
@@ -318,6 +319,13 @@
     </Compile>
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MealsPage.aspx.cs">
+      <DependentUpon>MealsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MealsPage.aspx.designer.cs">
+      <DependentUpon>MealsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterPage.aspx.cs">
