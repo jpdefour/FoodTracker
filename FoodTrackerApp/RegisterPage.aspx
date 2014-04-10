@@ -7,10 +7,20 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="RegisterForm" runat="server">
     <div>
     
+        Create a new account.<br />
+    
     </div>
+        Username
+        <asp:TextBox ID="NewUser" runat="server"></asp:TextBox>
+        <br />
+        Password
+        <asp:TextBox ID="NewPass" textmode="Password" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <asp:Button ID="btnRegister" runat="server" OnClick="Button1_Click" Text="Register" />
     </form>
 </body>
 </html>

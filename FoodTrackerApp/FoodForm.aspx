@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="FoodList" runat="server">
     <div>
     
         <asp:Label ID="Label1" runat="server" Text="Food List" Font-Size="XX-Large"></asp:Label>
@@ -22,7 +22,6 @@
                 <asp:BoundField DataField="quantity" HeaderText="quantity" SortExpression="quantity" />
                 <asp:BoundField DataField="storageEnvironment" HeaderText="storageEnvironment" SortExpression="storageEnvironment" />
                 <asp:CommandField ShowEditButton="True" />
-                <asp:CommandField ShowSelectButton="True" />
                 <asp:CommandField ShowDeleteButton="True" />
                 
             </Columns>
@@ -68,7 +67,7 @@
 
         <asp:TextBox ID="Quantity" runat="server"></asp:TextBox>
         <asp:TextBox ID="StorageEnvironment" runat="server"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add Food" />
     </form>
 </body>
 </html>

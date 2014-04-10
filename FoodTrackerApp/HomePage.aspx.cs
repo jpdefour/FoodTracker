@@ -18,8 +18,8 @@ namespace FoodTrackerApp
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            String strUserName = TextBox1.Text;
-            String strPW = TextBox2.Text;
+            String strUserName = lblUsername.Text;
+            String strPassword = lblPassword.Text;
 
             FoodTrackerData.AccountsDataTable dtAccounts = new FoodTrackerData.AccountsDataTable();
 
@@ -29,21 +29,19 @@ namespace FoodTrackerApp
 
             if (dtAccounts.Count == 0)
             {
-                Label3.Text = "No such account.";
+                lblErrorMsg.Text = "No such account.";
             }
             else
             {
                 FoodTrackerData.AccountsRow rowAccounts = dtAccounts[0];
 
-                if (strPW.Equals(rowAccounts["password"]))
+                if (strPassword.Equals(rowAccounts["password"]))
                 {
-                    Label3.Text = "Login Successful.";
-                    //Server.Transfer("FoodForm.aspx", true);
                     Response.Redirect("FoodForm.aspx");
                 }
                 else
                 {
-                    Label3.Text = "Password mismatch.";
+                    lblErrorMsg.Text = "Password mismatch.";
                 }
             }
         }

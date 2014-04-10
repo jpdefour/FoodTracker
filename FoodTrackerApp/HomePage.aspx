@@ -7,22 +7,22 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="LoginForm" runat="server">
     <div>
     
-        <asp:Label ID="lblUsername" runat="server" Text="UserName"></asp:Label>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:Label ID="lblUsername" runat="server" Text="Username"></asp:Label>
+        <asp:TextBox ID="boxUsername" runat="server"></asp:TextBox>
         <br />
     
     </div>
-        <asp:Label ID="Label2" runat="server" Text="PW"></asp:Label>
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label>
+        <asp:TextBox ID="boxPassword" textmode="Password" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
+        <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="Button1_Click" />
         <br />
         <br />
-        <asp:Label ID="Label3" runat="server" Text="Message"></asp:Label>
+        <asp:Label ID="lblErrorMsg" runat="server" Text=""></asp:Label>
     </form>
 </body>
 </html>
