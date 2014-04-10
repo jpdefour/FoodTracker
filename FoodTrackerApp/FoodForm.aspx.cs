@@ -13,6 +13,18 @@ namespace FoodTrackerApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            adaptFoods = new FoodTrackerDataTableAdapters.FoodsTableAdapter();
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            String food = FoodName.Text;
+            String quantity = Quantity.Text;
+            String storageEnvironment = StorageEnvironment.Text;
+
+            adaptFoods.AddFood(food, quantity, storageEnvironment);
+            Response.Redirect(Request.RawUrl);
 
         }
     }
