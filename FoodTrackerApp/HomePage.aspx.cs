@@ -39,7 +39,7 @@ namespace FoodTrackerApp
                 if (strPassword.Equals(rowAccounts["password"]))
                 {
                     Session["username"] = strUserName;
-                    Response.Redirect("FoodForm.aspx");
+                    Response.Redirect("FoodForm.aspx?username=" +  );
                 }
                 else
                 {

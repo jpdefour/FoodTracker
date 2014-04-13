@@ -13,9 +13,11 @@ namespace FoodTrackerApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            string username = (string)(Session["username"]);
             adaptFoods = new FoodTrackerDataTableAdapters.FoodsTableAdapter();
             FoodTrackerData.FoodsDataTable dtFoods = new FoodTrackerData.FoodsDataTable();
-            dtFoods = adaptFoods.getDataByUsernameFoodID(Session[username]);
+            // Idea is when the username and food id are connected in the contains table, they should be 
+            dtFoods = adaptFoods.getDataByUsernameFoodID(username); 
 
         }
 
