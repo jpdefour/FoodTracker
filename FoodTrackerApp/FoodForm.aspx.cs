@@ -16,9 +16,8 @@ namespace FoodTrackerApp
             string username = (string)(Session["username"]);
             adaptFoods = new FoodTrackerDataTableAdapters.FoodsTableAdapter();
             FoodTrackerData.FoodsDataTable dtFoods = new FoodTrackerData.FoodsDataTable();
-            // Idea is when the username and food id are connected in the contains table, they should be 
+            // Idea is when the username and food id are connected in the contains table, this should query the foods in an account has
             dtFoods = adaptFoods.getDataByUsernameFoodID(username); 
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)
