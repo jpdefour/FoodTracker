@@ -13,10 +13,10 @@ namespace FoodTrackerApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] != null)
-            {
-                adaptFoods = new FoodTrackerDataTableAdapters.FoodsTableAdapter();
-            }
+            adaptFoods = new FoodTrackerDataTableAdapters.FoodsTableAdapter();
+            FoodTrackerData.FoodsDataTable dtFoods = new FoodTrackerData.FoodsDataTable();
+            dtFoods = adaptFoods.getDataByUsernameFoodID(Session[username]);
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)

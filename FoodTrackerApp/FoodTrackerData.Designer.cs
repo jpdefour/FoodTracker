@@ -764,7 +764,7 @@ namespace FoodTrackerApp {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ContainsDataTable : global::System.Data.TypedTableBase<ContainsRow> {
             
-            private global::System.Data.DataColumn columncontainsId;
+            private global::System.Data.DataColumn columncontainsID;
             
             private global::System.Data.DataColumn columnusername;
             
@@ -805,9 +805,9 @@ namespace FoodTrackerApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn containsIdColumn {
+            public global::System.Data.DataColumn containsIDColumn {
                 get {
-                    return this.columncontainsId;
+                    return this.columncontainsID;
                 }
             }
             
@@ -864,10 +864,10 @@ namespace FoodTrackerApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ContainsRow AddContainsRow(int containsId, string username, int foodID) {
+            public ContainsRow AddContainsRow(int containsID, string username, int foodID) {
                 ContainsRow rowContainsRow = ((ContainsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        containsId,
+                        containsID,
                         username,
                         foodID};
                 rowContainsRow.ItemArray = columnValuesArray;
@@ -877,9 +877,9 @@ namespace FoodTrackerApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ContainsRow FindBycontainsId(int containsId) {
+            public ContainsRow FindBycontainsID(int containsID) {
                 return ((ContainsRow)(this.Rows.Find(new object[] {
-                            containsId})));
+                            containsID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -899,7 +899,7 @@ namespace FoodTrackerApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columncontainsId = base.Columns["containsId"];
+                this.columncontainsID = base.Columns["containsID"];
                 this.columnusername = base.Columns["username"];
                 this.columnfoodID = base.Columns["foodID"];
             }
@@ -907,16 +907,16 @@ namespace FoodTrackerApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columncontainsId = new global::System.Data.DataColumn("containsId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncontainsId);
+                this.columncontainsID = new global::System.Data.DataColumn("containsID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncontainsID);
                 this.columnusername = new global::System.Data.DataColumn("username", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusername);
                 this.columnfoodID = new global::System.Data.DataColumn("foodID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfoodID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columncontainsId}, true));
-                this.columncontainsId.AllowDBNull = false;
-                this.columncontainsId.Unique = true;
+                                this.columncontainsID}, true));
+                this.columncontainsID.AllowDBNull = false;
+                this.columncontainsID.Unique = true;
                 this.columnusername.AllowDBNull = false;
                 this.columnusername.MaxLength = 31;
                 this.columnfoodID.AllowDBNull = false;
@@ -2565,12 +2565,12 @@ namespace FoodTrackerApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int containsId {
+            public int containsID {
                 get {
-                    return ((int)(this[this.tableContains.containsIdColumn]));
+                    return ((int)(this[this.tableContains.containsIDColumn]));
                 }
                 set {
-                    this[this.tableContains.containsIdColumn] = value;
+                    this[this.tableContains.containsIDColumn] = value;
                 }
             }
             
@@ -3669,7 +3669,7 @@ namespace FoodTrackerApp.FoodTrackerDataTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Contains";
-            tableMapping.ColumnMappings.Add("containsId", "containsId");
+            tableMapping.ColumnMappings.Add("containsId", "containsID");
             tableMapping.ColumnMappings.Add("username", "username");
             tableMapping.ColumnMappings.Add("foodID", "foodID");
             this._adapter.TableMappings.Add(tableMapping);
@@ -3833,14 +3833,6 @@ namespace FoodTrackerApp.FoodTrackerDataTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string username, int foodID, int Original_containsId) {
-            return this.Update(Original_containsId, username, foodID, Original_containsId);
         }
     }
     
@@ -4007,7 +3999,7 @@ namespace FoodTrackerApp.FoodTrackerDataTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Foods.*\r\nFROM            Foods";
@@ -4020,6 +4012,12 @@ namespace FoodTrackerApp.FoodTrackerDataTableAdapters {
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@foodName", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "foodName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@quantity", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@storageEnvironment", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "storageEnvironment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT        Foods.foodName, Foods.quantity, Foods.storageEnvironment\r\nFROM     " +
+                "       Foods, Accounts, Contains\r\nWHERE       Accounts.username = Contains.usern" +
+                "ame AND Contains.foodID = Foods.foodID";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4028,6 +4026,17 @@ namespace FoodTrackerApp.FoodTrackerDataTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual FoodTrackerData.FoodsDataTable getAllFoods() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            FoodTrackerData.FoodsDataTable dataTable = new FoodTrackerData.FoodsDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual FoodTrackerData.FoodsDataTable getDataByUsernameFoodID() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             FoodTrackerData.FoodsDataTable dataTable = new FoodTrackerData.FoodsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
