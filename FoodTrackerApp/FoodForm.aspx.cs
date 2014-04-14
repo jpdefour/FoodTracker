@@ -9,25 +9,40 @@ namespace FoodTrackerApp
 {
     public partial class FoodForm : System.Web.UI.Page
     {
-        FoodTrackerDataTableAdapters.FoodsTableAdapter adaptFoods;
+        FoodTrackerDataTableAdapters.FoodsTableAdapter taFoods;
+        FoodTrackerDataTableAdapters.ContainsTableAdapter taContains;
+        FoodTrackerData.FoodsDataTable dtFoods;
+
+        string username;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string username = (string)(Session["username"]);
-            adaptFoods = new FoodTrackerDataTableAdapters.FoodsTableAdapter();
-            FoodTrackerData.FoodsDataTable dtFoods = new FoodTrackerData.FoodsDataTable();
-            // Idea is when the username and food id are connected in the contains table, this should query the foods in an account has
-            dtFoods = adaptFoods.getDataByUsernameFoodID(username); 
+            username = (string)(Session["username"]);
+
+            taFoods = new FoodTrackerDataTableAdapters.FoodsTableAdapter();
+            dtFoods = new FoodTrackerData.FoodsDataTable();
+
+            taContains = new FoodTrackerDataTableAdapters.ContainsTableAdapter();
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btnAddFood_Click(object sender, EventArgs e)
         {
             String food = FoodName.Text;
             String quantity = Quantity.Text;
             String storageEnvironment = StorageEnvironment.Text;
 
-            adaptFoods.AddFood(food, quantity, storageEnvironment);
-            Response.Redirect(Request.RawUrl);
+            taFoods.AddFood(food, quantity, storageEnvironment);
+
+            dtFoods = taFoods.getAllFoods();
+
+            FoodTrackerData.FoodsRow rowFood = dtFoods[dtFoods.Count - 1];
+
+            String strFoodID = rowFood["foodID"].ToString();
+            int FoodID = Convert.ToInt32(strFoodID);
+
+            taContains.insertIntoContains(username, FoodID);
+            
+            Response.Redirect("FoodForm.aspx");
 
         }
     }

@@ -24,6 +24,8 @@
                 <asp:CommandField ShowEditButton="True" />
                 <asp:CommandField ShowDeleteButton="True" />
                 
+                <asp:HyperLinkField Text="Ingredients" DataNavigateUrlFields="foodID" DataNavigateUrlFormatString="~/IngredientsPage.aspx?foodID={0}" />
+                
             </Columns>
 
 
@@ -42,8 +44,9 @@
 
 
         <asp:SqlDataSource ID="FoodsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:FTConnStr %>" 
-            SelectCommand="SELECT * FROM [Foods] ORDER BY [foodName]" 
-            DeleteCommand="DELETE FROM [Foods] WHERE [foodID] = @foodID" 
+            SelectCommand="SELECT * FROM [Foods] WHERE [foodID] IN (SELECT [Contains].[foodID] FROM [Contains] WHERE [Contains].[username] = @strUserName)" 
+            DeleteCommand="DELETE FROM [Foods] WHERE [foodID] = @foodID;
+DELETE FROM [Contains] WHERE [foodID] = @foodID;" 
             InsertCommand="INSERT INTO [Foods] ([foodID], [foodName], [quantity], [storageEnvironment]) VALUES (@foodID, @foodName, @quantity, @storageEnvironment)" 
             UpdateCommand="UPDATE [Foods] SET [foodName] = @foodName, [quantity] = @quantity, [storageEnvironment] = @storageEnvironment WHERE [foodID] = @foodID">
             <DeleteParameters>
@@ -55,6 +58,9 @@
                 <asp:Parameter Name="quantity" Type="String" />
                 <asp:Parameter Name="storageEnvironment" Type="String" />
             </InsertParameters>
+            <SelectParameters>
+                <asp:SessionParameter Name="strUserName" SessionField="username" />
+            </SelectParameters>
             <UpdateParameters>
                 <asp:Parameter Name="foodName" Type="String" />
                 <asp:Parameter Name="quantity" Type="String" />
@@ -67,7 +73,7 @@
 
         <asp:TextBox ID="Quantity" runat="server"></asp:TextBox>
         <asp:TextBox ID="StorageEnvironment" runat="server"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add Food" />
+        <asp:Button ID="btnAddFood" runat="server" OnClick="btnAddFood_Click" Text="Add Food" />
     </form>
 </body>
 </html>

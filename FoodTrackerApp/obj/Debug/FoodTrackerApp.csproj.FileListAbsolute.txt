@@ -55,6 +55,6 @@ C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth
 C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.OpenId.xml
 C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
 C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.AspNet.xml
-C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\obj\Debug\FoodTrackerApp.csprojResolveAssemblyReference.cache
 C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\obj\Debug\FoodTrackerApp.dll
 C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\obj\Debug\FoodTrackerApp.pdb
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\obj\Debug\FoodTrackerApp.csprojResolveAssemblyReference.cache

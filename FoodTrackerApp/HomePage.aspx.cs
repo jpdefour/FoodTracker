@@ -39,7 +39,6 @@ namespace FoodTrackerApp
                 if (strPassword.Equals(rowAccounts["password"]))
                 {
                     Session["username"] = strUserName;
-                    // Put here a way to make the Accounts connect to Contains I'm not sure how.
                     Response.Redirect("FoodForm.aspx");
 
                 }

@@ -213,6 +213,7 @@
       <DependentUpon>FoodTrackerData.xsd</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="RecipePage.aspx" />
     <Content Include="RegisterPage.aspx" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -336,6 +337,13 @@
       <DependentUpon>MealsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipePage.aspx.cs">
+      <DependentUpon>RecipePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipePage.aspx.designer.cs">
+      <DependentUpon>RecipePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegisterPage.aspx.cs">
       <DependentUpon>RegisterPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
