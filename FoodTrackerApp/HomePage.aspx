@@ -10,7 +10,7 @@
     <form id="LoginForm" runat="server">
     <div>
     
-        <h1>Welcome To FoodTracker</h1><br />
+        <img src="images/foodtracker4.png" /><br /><br />
         Log in to see your foods!
 
         <br />
