@@ -16,11 +16,11 @@
         <br />
     
         <asp:Label ID="lblUsername" runat="server" Text="Username"></asp:Label>
-        &nbsp;<asp:TextBox ID="boxUsername" runat="server"></asp:TextBox>
+        &nbsp;<asp:TextBox ID="boxUsername" runat="server" placeholder="Username"></asp:TextBox>
         <br />
     
     </div>
-        <asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label>
+        <asp:Label ID="lblPassword" runat="server" Text="Password" placeholder="Password"></asp:Label>
         &nbsp;<asp:TextBox ID="boxPassword" textmode="Password" runat="server"></asp:TextBox>
         <br />
         <br />

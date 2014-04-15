@@ -6,18 +6,18 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body style="text-align:center;">
     <form id="RegisterForm" runat="server">
     <div>
     
-        Create a new account.<br />
+        <h2>Create a new account!</h2><br />
     
     </div>
         Username
-        <asp:TextBox ID="NewUser" runat="server"></asp:TextBox>
+        <asp:TextBox ID="NewUser" runat="server" placeholder="Username"></asp:TextBox>
         <br />
         Password
-        <asp:TextBox ID="NewPass" textmode="Password" runat="server"></asp:TextBox>
+        <asp:TextBox ID="NewPass" textmode="Password" runat="server" placeholder="Password"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="btnRegister" runat="server" OnClick="Button1_Click" Text="Register" />
