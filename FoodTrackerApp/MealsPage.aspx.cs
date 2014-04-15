@@ -9,12 +9,15 @@ namespace FoodTrackerApp
 {
     public partial class MealsPage : System.Web.UI.Page
     {
+        String username;
         FoodTrackerDataTableAdapters.MealsTableAdapter taMeals;
         FoodTrackerDataTableAdapters.MadeIntoTableAdapter taMadeInto;
         FoodTrackerData.MealsDataTable dtMeals;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            usernameCheck();
+
             taMeals = new FoodTrackerDataTableAdapters.MealsTableAdapter();
             taMadeInto = new FoodTrackerDataTableAdapters.MadeIntoTableAdapter();
             dtMeals = new FoodTrackerData.MealsDataTable();
@@ -41,5 +44,16 @@ namespace FoodTrackerApp
 
             Response.Redirect("MealsPage.aspx?foodID=" + Request.QueryString["foodID"]);
         }
+
+        public void usernameCheck()
+        {
+            username = (string)(Session["username"]);
+            if (username == null)
+            {
+                Response.Redirect("HomePage.aspx");
+            }
+        }
+
+
     }
 }

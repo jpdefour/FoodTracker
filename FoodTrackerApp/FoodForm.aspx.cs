@@ -9,16 +9,18 @@ namespace FoodTrackerApp
 {
     public partial class FoodForm : System.Web.UI.Page
     {
+        string username;
         FoodTrackerDataTableAdapters.FoodsTableAdapter taFoods;
         FoodTrackerDataTableAdapters.ContainsTableAdapter taContains;
         FoodTrackerData.FoodsDataTable dtFoods;
 
-        string username;
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            username = (string)(Session["username"]);
-
+            
+            usernameCheck();
+            
             taFoods = new FoodTrackerDataTableAdapters.FoodsTableAdapter();
             dtFoods = new FoodTrackerData.FoodsDataTable();
 
@@ -44,6 +46,15 @@ namespace FoodTrackerApp
             
             Response.Redirect("FoodForm.aspx");
 
+        }
+
+        public void usernameCheck()
+        {
+            username = (string)(Session["username"]);
+            if (username == null)
+            {
+                Response.Redirect("HomePage.aspx");
+            }
         }
     }
 }

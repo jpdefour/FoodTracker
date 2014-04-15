@@ -11,7 +11,7 @@
     <div>
     
     </div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="foodID" DataSourceID="MealsDataSource1" Height="428px" Width="1307px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="foodID" DataSourceID="MealsDataSource1" Height="428px" Width="1307px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" AllowPaging="True">
             <Columns>
                 <asp:BoundField DataField="foodID" HeaderText="foodID" InsertVisible="False" ReadOnly="True" SortExpression="foodID" Visible="False" />
                 <asp:BoundField DataField="recipe" HeaderText="Recipe" SortExpression="recipe" />

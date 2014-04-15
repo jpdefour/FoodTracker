@@ -9,12 +9,16 @@ namespace FoodTrackerApp
 {
     public partial class IngredientsPage : System.Web.UI.Page
     {
+        string username;
         FoodTrackerDataTableAdapters.IngredientsTableAdapter taIngredients;
         FoodTrackerDataTableAdapters.IncludesTableAdapter taIncludes;
         FoodTrackerData.IngredientsDataTable dtIngredients;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            usernameCheck();
+
             taIngredients = new FoodTrackerDataTableAdapters.IngredientsTableAdapter();
             taIncludes = new FoodTrackerDataTableAdapters.IncludesTableAdapter();
             dtIngredients = new FoodTrackerData.IngredientsDataTable();
@@ -38,6 +42,15 @@ namespace FoodTrackerApp
             taIncludes.insertIntoIncludes(foodID, IngredientID);
 
             Response.Redirect("IngredientsPage.aspx?foodID=" + Request.QueryString["foodID"]);
+        }
+
+        public void usernameCheck()
+        {
+            username = (string)(Session["username"]);
+            if (username == null)
+            {
+                Response.Redirect("HomePage.aspx");
+            }
         }
 
     }
