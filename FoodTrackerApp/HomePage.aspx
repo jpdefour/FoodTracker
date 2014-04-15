@@ -12,7 +12,7 @@
     <div>
     
         <img src="images/foodtracker.png" /><br /><br />
-        Log in to see your foods!
+        Log in to see your foods!yumm
 
         <br />
     
