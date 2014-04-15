@@ -22,7 +22,7 @@
         </asp:GridView>
         <asp:SqlDataSource ID="IngredientsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:FTConnStr %>" 
             SelectCommand="SELECT [Ingredients].* FROM [Ingredients] WHERE [Ingredients].[ingredientID] IN (SELECT [ingredientID] FROM [Includes] WHERE [foodID] = @strFoodID);" 
-            DeleteCommand="DELETE FROM [Ingredients] WHERE [ingredientID] = @ingredientID;  DELETE FROM [Includes] WHERE [ingredientID] = @ingredientID;" UpdateCommand="UPDATE Ingredients SET ingredientName = @ingredientName, ingredientQuantity =@ingredientQuantity;">
+            DeleteCommand="DELETE FROM [Ingredients] WHERE [ingredientID] = @ingredientID;  DELETE FROM [Includes] WHERE [ingredientID] = @ingredientID;" UpdateCommand="UPDATE Ingredients SET ingredientName = @ingredientName, ingredientQuantity =@ingredientQuantity WHERE ingredientID = @ingredientID;">
             <DeleteParameters>
                 <asp:Parameter Name="ingredientID" Type="Int32" />
             </DeleteParameters>
@@ -32,6 +32,7 @@
             <UpdateParameters>
                 <asp:Parameter Name="ingredientName" />
                 <asp:Parameter Name="ingredientQuantity" />
+                <asp:Parameter Name="ingredientID" />
             </UpdateParameters>
         </asp:SqlDataSource>
         <asp:TextBox ID="boxIngredientName" runat="server"></asp:TextBox>

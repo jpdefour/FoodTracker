@@ -10,7 +10,7 @@
     <form id="RegisterForm" runat="server">
     <div>
     
-        <h2>Create a new account!!!!!!</h2><br />
+        <h2>Create a new account!</h2><br />
     
     </div>
         Username
@@ -20,7 +20,7 @@
         <asp:TextBox ID="NewPass" textmode="Password" runat="server" placeholder="Password"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="btnRegister" runat="server" OnClick="Button1_Click" Text="Register" /> 
+        <asp:Button ID="btnRegister" runat="server" OnClick="Button1_Click" Text="Register" />
     &nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
     </form>
