@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body style="text-align:center;">
     <form id="FoodList" runat="server">
     <div>
     
@@ -14,7 +14,7 @@
       
     </div>
         <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="foodID" DataSourceID="FoodsDataSource" Height="284px" style="margin-left: 0px; margin-top: 0px" Width="554px" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None">
             <AlternatingRowStyle BackColor="PaleGoldenrod" />
             <Columns>
@@ -71,10 +71,10 @@ DELETE FROM [Contains] WHERE [foodID] = @foodID;"
             </UpdateParameters>
         </asp:SqlDataSource>
     
-        <asp:TextBox ID="FoodName" runat="server"></asp:TextBox>
+        <asp:TextBox ID="FoodName" runat="server" placeholder="Food Name"></asp:TextBox>
 
-        <asp:TextBox ID="Quantity" runat="server"></asp:TextBox>
-        <asp:TextBox ID="StorageEnvironment" runat="server"></asp:TextBox>
+        <asp:TextBox ID="Quantity" runat="server" placeholder="Quantity"></asp:TextBox>
+        <asp:TextBox ID="StorageEnvironment" runat="server" placeholder="Storage Environment"></asp:TextBox>
         <asp:Button ID="btnAddFood" runat="server" OnClick="btnAddFood_Click" Text="Add Food" />
     </form>
 </body>

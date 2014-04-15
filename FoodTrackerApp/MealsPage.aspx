@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body style="text-align:center">
     <form id="MealForm" runat="server">
     <div>
     
@@ -34,7 +34,7 @@
                 <asp:Parameter Name="foodID" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:TextBox ID="boxRecipe" runat="server" Height="106px" Width="830px"></asp:TextBox>
+        <asp:TextBox ID="boxRecipe" runat="server" Height="106px" Width="830px" placeholder="Type in your recipe"></asp:TextBox>
         <asp:Button ID="btnRecipe" runat="server" Text="Add Recipe" OnClick="btnRecipe_Click" />
     </form>
 </body>
