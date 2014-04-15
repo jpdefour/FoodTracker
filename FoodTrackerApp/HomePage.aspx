@@ -10,7 +10,7 @@
     <form id="LoginForm" runat="server">
     <div>
     
-        <h1>Welcome To FoodTracker</h1><br />
+        <h1>Welcome To FoodTracker!!!!!!!!!!!!!!!!!!!!!!!!!</h1><br />
         Log in to see your foods!
 
         <br />
