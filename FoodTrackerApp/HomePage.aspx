@@ -2,11 +2,12 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <title></title>
 </head>
-<body align="center">
+<body>
     <form id="LoginForm" runat="server">
     <div>
     
