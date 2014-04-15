@@ -10,7 +10,7 @@
     <form id="MealForm" runat="server">
     <div>
     
-    </div>
+        Recipes</div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="foodID" DataSourceID="MealsDataSource1" Height="428px" Width="1307px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" AllowPaging="True">
             <Columns>
                 <asp:BoundField DataField="foodID" HeaderText="foodID" InsertVisible="False" ReadOnly="True" SortExpression="foodID" Visible="False" />
@@ -45,6 +45,9 @@
         </asp:SqlDataSource>
         <asp:TextBox ID="boxRecipe" runat="server" Height="106px" Width="830px" placeholder="Type in your recipe"></asp:TextBox>
         <asp:Button ID="btnRecipe" runat="server" Text="Add Recipe" OnClick="btnRecipe_Click" />
+        <p>
+            <asp:HyperLink ID="HyperLink1" runat="server">Logout</asp:HyperLink>
+        </p>
     </form>
 </body>
 </html>
