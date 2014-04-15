@@ -6,11 +6,13 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body align="center">
     <form id="LoginForm" runat="server">
     <div>
     
-        Welcome. Please log in.<br />
+        <h1>Welcome To FoodTracker</h1><br />
+        Log in to see your foods!
+
         <br />
     
         <asp:Label ID="lblUsername" runat="server" Text="Username"></asp:Label>
@@ -23,6 +25,8 @@
         <br />
         <br />
         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="Button1_Click" />
+        &nbsp;&nbsp;&nbsp;
+        <asp:Button ID="btnRegister" runat="server" OnClick="Register_Click1" Text="Register" />
         <br />
         <br />
         <asp:Label ID="lblErrorMsg" runat="server" Text=""></asp:Label>

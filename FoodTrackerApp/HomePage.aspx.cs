@@ -48,5 +48,12 @@ namespace FoodTrackerApp
                 }
             }
         }
+
+        protected void Register_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("RegisterPage.aspx");
+        }
+
+
     }
 }

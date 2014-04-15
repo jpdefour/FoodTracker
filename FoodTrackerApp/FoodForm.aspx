@@ -26,6 +26,8 @@
                 
                 <asp:HyperLinkField Text="Ingredients" DataNavigateUrlFields="foodID" DataNavigateUrlFormatString="~/IngredientsPage.aspx?foodID={0}" />
                 
+                <asp:HyperLinkField DataNavigateUrlFields="foodID" DataNavigateUrlFormatString="~/MealsPage.aspx?foodID={0}" Text="Recipe" />
+                
             </Columns>
 
 

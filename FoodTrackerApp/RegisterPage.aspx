@@ -21,6 +21,8 @@
         <br />
         <br />
         <asp:Button ID="btnRegister" runat="server" OnClick="Button1_Click" Text="Register" />
+    &nbsp;&nbsp;&nbsp;
+        <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
     </form>
 </body>
 </html>

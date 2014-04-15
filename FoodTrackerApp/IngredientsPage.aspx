@@ -16,18 +16,23 @@
                 <asp:BoundField DataField="ingredientID" HeaderText="ingredientID" SortExpression="ingredientID" InsertVisible="False" ReadOnly="True" Visible="False" />
                 <asp:BoundField DataField="ingredientName" HeaderText="ingredientName" SortExpression="ingredientName" />
                 <asp:BoundField DataField="ingredientQuantity" HeaderText="ingredientQuantity" SortExpression="ingredientQuantity" />
+                <asp:CommandField ShowEditButton="True" />
                 <asp:CommandField ShowDeleteButton="True" />
             </Columns>
         </asp:GridView>
         <asp:SqlDataSource ID="IngredientsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:FTConnStr %>" 
             SelectCommand="SELECT [Ingredients].* FROM [Ingredients] WHERE [Ingredients].[ingredientID] IN (SELECT [ingredientID] FROM [Includes] WHERE [foodID] = @strFoodID);" 
-            DeleteCommand="DELETE FROM [Ingredients] WHERE [ingredientID] = @ingredientID;  DELETE FROM [Includes] WHERE [ingredientID] = @ingredientID;">
+            DeleteCommand="DELETE FROM [Ingredients] WHERE [ingredientID] = @ingredientID;  DELETE FROM [Includes] WHERE [ingredientID] = @ingredientID;" UpdateCommand="UPDATE Ingredients SET ingredientName = @ingredientName, ingredientQuantity =@ingredientQuantity;">
             <DeleteParameters>
                 <asp:Parameter Name="ingredientID" Type="Int32" />
             </DeleteParameters>
             <SelectParameters>
                 <asp:QueryStringParameter DefaultValue="11" Name="strFoodID" QueryStringField="foodID" />
             </SelectParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="ingredientName" />
+                <asp:Parameter Name="ingredientQuantity" />
+            </UpdateParameters>
         </asp:SqlDataSource>
         <asp:TextBox ID="boxIngredientName" runat="server"></asp:TextBox>
         <asp:TextBox ID="boxIngredientQuantity" runat="server"></asp:TextBox>

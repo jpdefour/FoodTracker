@@ -13,13 +13,13 @@ namespace FoodTrackerApp {
     public partial class MealsPage {
         
         /// <summary>
-        /// MealsForm control.
+        /// MealForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm MealsForm;
+        protected global::System.Web.UI.HtmlControls.HtmlForm MealForm;
         
         /// <summary>
         /// GridView1 control.
@@ -31,12 +31,30 @@ namespace FoodTrackerApp {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// MealsDataSource control.
+        /// MealsDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource MealsDataSource;
+        protected global::System.Web.UI.WebControls.SqlDataSource MealsDataSource1;
+        
+        /// <summary>
+        /// boxRecipe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox boxRecipe;
+        
+        /// <summary>
+        /// btnRecipe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRecipe;
     }
 }
