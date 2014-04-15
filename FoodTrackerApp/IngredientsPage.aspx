@@ -10,8 +10,9 @@
     <form id="form1" runat="server">
     <div>
     
-        Ingredients</div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="IngredientsDataSource" Height="258px" Width="520px" DataKeyNames="ingredientID">
+        Ingredients<br />
+        </div>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="IngredientsDataSource" Height="454px" Width="1311px" DataKeyNames="ingredientID" AllowPaging="True" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2">
             <Columns>
                 <asp:BoundField DataField="ingredientID" HeaderText="ingredientID" SortExpression="ingredientID" InsertVisible="False" ReadOnly="True" Visible="False" />
                 <asp:BoundField DataField="ingredientName" HeaderText="ingredientName" SortExpression="ingredientName" />
@@ -19,6 +20,15 @@
                 <asp:CommandField ShowEditButton="True" />
                 <asp:CommandField ShowDeleteButton="True" />
             </Columns>
+            <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+            <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+            <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+            <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+            <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#FFF1D4" />
+            <SortedAscendingHeaderStyle BackColor="#B95C30" />
+            <SortedDescendingCellStyle BackColor="#F1E5CE" />
+            <SortedDescendingHeaderStyle BackColor="#93451F" />
         </asp:GridView>
         <asp:SqlDataSource ID="IngredientsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:FTConnStr %>" 
             SelectCommand="SELECT [Ingredients].* FROM [Ingredients] WHERE [Ingredients].[ingredientID] IN (SELECT [ingredientID] FROM [Includes] WHERE [foodID] = @strFoodID);" 
