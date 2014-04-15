@@ -22,7 +22,7 @@
         <asp:SqlDataSource ID="MealsDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:FTConnStr %>" 
             SelectCommand="SELECT [Meals].* FROM [Meals] WHERE [Meals].[foodID] IN (SELECT [foodID] FROM [MadeInto] WHERE [foodID] = @strFoodID);" 
             DeleteCommand="DELETE FROM [Meals] WHERE [foodID] = @foodID;  DELETE FROM [MadeInto] WHERE [foodID] = @foodID;" 
-            UpdateCommand="UPDATE Meals SET recipe = @recipe;">
+            UpdateCommand="UPDATE Meals SET recipe = @recipe WHERE foodID = @foodID">
             <DeleteParameters>
                 <asp:Parameter Name="foodID" />
             </DeleteParameters>
@@ -31,6 +31,7 @@
             </SelectParameters>
             <UpdateParameters>
                 <asp:Parameter Name="recipe" />
+                <asp:Parameter Name="foodID" />
             </UpdateParameters>
         </asp:SqlDataSource>
         <asp:TextBox ID="boxRecipe" runat="server" Height="106px" Width="830px"></asp:TextBox>
