@@ -21,7 +21,7 @@
     
     </div>
         <asp:Label ID="lblPassword" runat="server" Text="Password" placeholder="Password"></asp:Label>
-        &nbsp;<asp:TextBox ID="boxPassword" textmode="Password" runat="server"></asp:TextBox>
+        &nbsp;<asp:TextBox ID="boxPassword" runat="server" placeholder="Password" textmode="Password"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="Button1_Click" />

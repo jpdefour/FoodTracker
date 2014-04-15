@@ -17,7 +17,7 @@
         <asp:TextBox ID="NewUser" runat="server" placeholder="Username"></asp:TextBox>
         <br />
         Password
-        <asp:TextBox ID="NewPass" textmode="Password" runat="server" placeholder="Password"></asp:TextBox>
+        <asp:TextBox ID="NewPass" runat="server" placeholder="Password" textmode="Password"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="btnRegister" runat="server" OnClick="Button1_Click" Text="Register" />
