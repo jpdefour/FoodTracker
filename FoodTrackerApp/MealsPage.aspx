@@ -46,7 +46,11 @@
         <asp:TextBox ID="boxRecipe" runat="server" Height="106px" Width="830px" placeholder="Type in your recipe"></asp:TextBox>
         <asp:Button ID="btnRecipe" runat="server" Text="Add Recipe" OnClick="btnRecipe_Click" />
         <p>
-            <asp:HyperLink ID="HyperLink1" runat="server">Logout</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server">HyperLink</asp:HyperLink>
+        </p>
+        <p>
+            <asp:TextBox ID="boxEmail" runat="server"></asp:TextBox>
+            <asp:Button ID="btnEmail" runat="server" Text="Email" OnClick="btnEmail_Click" />
         </p>
     </form>
 </body>
