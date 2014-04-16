@@ -19,6 +19,9 @@ namespace FoodTrackerApp
         FoodTrackerDataTableAdapters.FoodsTableAdapter taFood;
         FoodTrackerData.FoodsDataTable dtFood;
 
+     //   FoodTrackerDataTableAdapters.IngredientsTableAdapter taIngredients;
+     //   FoodTrackerData.FoodsDataTable dtIngredients;
+
         int foodID;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -33,6 +36,8 @@ namespace FoodTrackerApp
 
             taFood = new FoodTrackerDataTableAdapters.FoodsTableAdapter();
             dtFood = new FoodTrackerData.FoodsDataTable();
+
+            
 
             if (!IsPostBack)
             {
@@ -107,7 +112,7 @@ namespace FoodTrackerApp
 
                 msgMail.From = new MailAddress("foodtracker123@gmail.com");
 
-                msgMail.Subject = "Your Recipe is here! The recipe for " + rowFood["foodName"].ToString() + " from " + username + " at FoodTracker";
+                msgMail.Subject = "[FoodTracker]Your Recipe is here! The recipe for " + rowFood["foodName"].ToString() + " from " + username;
 
                 msgMail.Body = strRecipe;
 
