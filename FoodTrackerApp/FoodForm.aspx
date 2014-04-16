@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-    <form id="FoodList" runat="server">
+    <form id="FoodList" runat="server" style="align-content:center; text-align:center;">
     <div>
     
         <asp:Label ID="Label1" runat="server" Text="Food List" Font-Size="XX-Large"></asp:Label>
@@ -15,11 +15,12 @@
     </div>
         <br />
         <br />
-        <asp:GridView ID="viewFoods" runat="server" AutoGenerateColumns="False" DataKeyNames="foodID" DataSourceID="FoodsDataSource" Height="392px" style="margin-left: 0px; margin-top: 0px" Width="1309px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderWidth="1px" CellPadding="3" BorderStyle="None" CellSpacing="2" AllowPaging="True" AllowSorting="True">
+        <asp:GridView ID="viewFoods" runat="server" AutoGenerateColumns="False" DataKeyNames="foodID" DataSourceID="FoodsDataSource" Height="461px" style="margin-left: 0px; margin-top: 0px" Width="1150px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderWidth="1px" CellPadding="3" BorderStyle="None" CellSpacing="2" AllowPaging="True" AllowSorting="True">
             <Columns>
                 <asp:BoundField DataField="foodName" HeaderText="Food" SortExpression="foodName" />
                 <asp:BoundField DataField="quantity" HeaderText="Quantity" SortExpression="quantity" />
                 <asp:BoundField DataField="storageEnvironment" HeaderText="Storage Environment" SortExpression="storageEnvironment" />
+                <asp:ButtonField ButtonType="Image" CommandName="Select" HeaderText="Favorite" ShowHeader="True" Text="Favorite" ImageUrl="~/Images/star.png" CausesValidation="True" InsertVisible="False" />
                 <asp:CommandField ShowEditButton="True" />
                 <asp:CommandField ShowDeleteButton="True" />
                 
