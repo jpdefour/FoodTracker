@@ -14,7 +14,6 @@ namespace FoodTrackerApp
     {
         String username;
         FoodTrackerDataTableAdapters.MealsTableAdapter taMeals;
-        //FoodTrackerDataTableAdapters.MadeIntoTableAdapter taMadeInto;
         FoodTrackerData.MealsDataTable dtMeals;
 
         FoodTrackerDataTableAdapters.FoodsTableAdapter taFood;
@@ -30,7 +29,6 @@ namespace FoodTrackerApp
             foodID = Convert.ToInt32(strFoodID);
 
             taMeals = new FoodTrackerDataTableAdapters.MealsTableAdapter();
-            //taMadeInto = new FoodTrackerDataTableAdapters.MadeIntoTableAdapter();
             dtMeals = new FoodTrackerData.MealsDataTable();
 
             taFood = new FoodTrackerDataTableAdapters.FoodsTableAdapter();
@@ -60,18 +58,6 @@ namespace FoodTrackerApp
             else
                 taMeals.addMeals(foodID, recipe);
 
-            //dtMeals = taMeals.getAllMeals();
-
-            //FoodTrackerData.MealsRow rowMeal = dtMeals[dtMeals.Count - 1];
-            /*
-            String strFoodID = rowFood["foodID"].ToString();
-            int FoodID = Convert.ToInt32(strFoodID);
-             */
-            
-
-            //taMadeInto.insertIntoMadeInto(foodID);
-
-            //Response.Redirect("MealsPage.aspx?foodID=" + Request.QueryString["foodID"]);
         }
 
         public void usernameCheck()
@@ -92,7 +78,7 @@ namespace FoodTrackerApp
 
             FoodTrackerData.MealsRow rowMeals;
 
-            String strRecipe = "You need some recipe!!!!!";
+            String strRecipe = "You need a recipe first";
 
             if (dtMeals.Count > 0)
             {
@@ -116,7 +102,7 @@ namespace FoodTrackerApp
 
             msgMail.From = new MailAddress("foodtracker123@gmail.com");
 
-            msgMail.Subject = "Your Recipe is here! The recipe for " + rowFood["foodName"].ToString();
+            msgMail.Subject = "Your Recipe is here! The recipe for " + rowFood["foodName"].ToString() + " from " + username;
 
             msgMail.Body = strRecipe;
 

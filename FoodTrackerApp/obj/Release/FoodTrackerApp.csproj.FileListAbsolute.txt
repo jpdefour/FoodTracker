@@ -27,3 +27,4 @@ C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth
 C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\bin\DotNetOpenAuth.AspNet.xml
 C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\obj\Release\FoodTrackerApp.dll
 C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\obj\Release\FoodTrackerApp.pdb
+C:\Users\User\DatabaseWorkspace\FoodTrackerApp\FoodTrackerApp\obj\Release\FoodTrackerApp.csprojResolveAssemblyReference.cache
