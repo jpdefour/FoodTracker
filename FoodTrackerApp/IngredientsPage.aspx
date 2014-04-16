@@ -15,8 +15,8 @@
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="IngredientsDataSource" Height="454px" Width="1311px" DataKeyNames="ingredientID" AllowPaging="True" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2">
             <Columns>
                 <asp:BoundField DataField="ingredientID" HeaderText="ingredientID" SortExpression="ingredientID" InsertVisible="False" ReadOnly="True" Visible="False" />
-                <asp:BoundField DataField="ingredientName" HeaderText="ingredientName" SortExpression="ingredientName" />
-                <asp:BoundField DataField="ingredientQuantity" HeaderText="ingredientQuantity" SortExpression="ingredientQuantity" />
+                <asp:BoundField DataField="ingredientName" HeaderText="Ingredient" SortExpression="ingredientName" />
+                <asp:BoundField DataField="ingredientQuantity" HeaderText="Quantity" SortExpression="ingredientQuantity" />
                 <asp:CommandField ShowEditButton="True" />
                 <asp:CommandField ShowDeleteButton="True" />
             </Columns>

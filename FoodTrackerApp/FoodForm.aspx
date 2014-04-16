@@ -17,9 +17,9 @@
         <br />
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="foodID" DataSourceID="FoodsDataSource" Height="392px" style="margin-left: 0px; margin-top: 0px" Width="1309px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderWidth="1px" CellPadding="3" BorderStyle="None" CellSpacing="2" AllowPaging="True" AllowSorting="True">
             <Columns>
-                <asp:BoundField DataField="foodName" HeaderText="foodName" SortExpression="foodName" />
-                <asp:BoundField DataField="quantity" HeaderText="quantity" SortExpression="quantity" />
-                <asp:BoundField DataField="storageEnvironment" HeaderText="storageEnvironment" SortExpression="storageEnvironment" />
+                <asp:BoundField DataField="foodName" HeaderText="Food" SortExpression="foodName" />
+                <asp:BoundField DataField="quantity" HeaderText="Quantity" SortExpression="quantity" />
+                <asp:BoundField DataField="storageEnvironment" HeaderText="Storage Environment" SortExpression="storageEnvironment" />
                 <asp:CommandField ShowEditButton="True" />
                 <asp:CommandField ShowDeleteButton="True" />
                 
