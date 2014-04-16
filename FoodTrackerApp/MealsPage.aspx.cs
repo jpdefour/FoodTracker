@@ -14,38 +14,64 @@ namespace FoodTrackerApp
     {
         String username;
         FoodTrackerDataTableAdapters.MealsTableAdapter taMeals;
-        FoodTrackerDataTableAdapters.MadeIntoTableAdapter taMadeInto;
+        //FoodTrackerDataTableAdapters.MadeIntoTableAdapter taMadeInto;
         FoodTrackerData.MealsDataTable dtMeals;
+
+        FoodTrackerDataTableAdapters.FoodsTableAdapter taFood;
+        FoodTrackerData.FoodsDataTable dtFood;
+
+        int foodID;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             usernameCheck();
 
+            String strFoodID = Request.QueryString["foodID"].ToString();
+            foodID = Convert.ToInt32(strFoodID);
+
             taMeals = new FoodTrackerDataTableAdapters.MealsTableAdapter();
-            taMadeInto = new FoodTrackerDataTableAdapters.MadeIntoTableAdapter();
+            //taMadeInto = new FoodTrackerDataTableAdapters.MadeIntoTableAdapter();
             dtMeals = new FoodTrackerData.MealsDataTable();
+
+            taFood = new FoodTrackerDataTableAdapters.FoodsTableAdapter();
+            dtFood = new FoodTrackerData.FoodsDataTable();
+
+            if (!IsPostBack)
+            {
+                dtMeals = taMeals.getMealsbyFoodID(foodID);
+
+                if (dtMeals.Count > 0)
+                {
+                    FoodTrackerData.MealsRow rowMeals = dtMeals[0];
+
+                    boxRecipe.Text = rowMeals["recipe"].ToString();
+                }
+            }
         }
 
         protected void btnRecipe_Click(object sender, EventArgs e)
         {
-            String strFoodID = Request.QueryString["foodID"].ToString();
-            int foodID = Convert.ToInt32(strFoodID);
-
             String recipe = boxRecipe.Text;
-            taMeals.addMeals(foodID,recipe);
 
-            dtMeals = taMeals.getAllMeals();
+            dtMeals = taMeals.getMealsbyFoodID(foodID);
 
-            FoodTrackerData.MealsRow rowMeal = dtMeals[dtMeals.Count - 1];
+            if (dtMeals.Count > 0)
+                taMeals.updateMealsByFoodID(recipe, foodID);
+            else
+                taMeals.addMeals(foodID, recipe);
+
+            //dtMeals = taMeals.getAllMeals();
+
+            //FoodTrackerData.MealsRow rowMeal = dtMeals[dtMeals.Count - 1];
             /*
             String strFoodID = rowFood["foodID"].ToString();
             int FoodID = Convert.ToInt32(strFoodID);
              */
             
 
-            taMadeInto.insertIntoMadeInto(foodID);
+            //taMadeInto.insertIntoMadeInto(foodID);
 
-            Response.Redirect("MealsPage.aspx?foodID=" + Request.QueryString["foodID"]);
+            //Response.Redirect("MealsPage.aspx?foodID=" + Request.QueryString["foodID"]);
         }
 
         public void usernameCheck()
@@ -59,6 +85,22 @@ namespace FoodTrackerApp
 
         protected void btnEmail_Click(object sender, EventArgs e)
         {
+            dtFood = taFood.getFoodByFoodID(foodID);
+            FoodTrackerData.FoodsRow rowFood = dtFood[0];
+
+            dtMeals = taMeals.getMealsbyFoodID(foodID);
+
+            FoodTrackerData.MealsRow rowMeals;
+
+            String strRecipe = "You need some recipe!!!!!";
+
+            if (dtMeals.Count > 0)
+            {
+                rowMeals = dtMeals[0];
+
+                strRecipe = rowMeals["recipe"].ToString();
+            }
+
             SmtpClient m_clientSmtp;
 
             //setup smtp client
@@ -66,17 +108,17 @@ namespace FoodTrackerApp
 
             m_clientSmtp.Port = 587;
             m_clientSmtp.UseDefaultCredentials = false;
-            m_clientSmtp.Credentials = new NetworkCredential("EMAILNAME", "PASSWORD");
+            m_clientSmtp.Credentials = new NetworkCredential("foodtracker123", "foodtracker1234");
             m_clientSmtp.EnableSsl = true;
 
             //setup mail
             MailMessage msgMail = new MailMessage();
 
-            msgMail.From = new MailAddress("foodtracker@gmail.com");
+            msgMail.From = new MailAddress("foodtracker123@gmail.com");
 
-            msgMail.Subject = "Your Recipe is here!";
+            msgMail.Subject = "Your Recipe is here! The recipe for " + rowFood["foodName"].ToString();
 
-            msgMail.Body = "The recipe for";
+            msgMail.Body = strRecipe;
 
             //send test ads
             msgMail.To.Add(boxEmail.Text);

@@ -22,24 +22,6 @@ namespace FoodTrackerApp {
         protected global::System.Web.UI.HtmlControls.HtmlForm MealForm;
         
         /// <summary>
-        /// GridView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-        
-        /// <summary>
-        /// MealsDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource MealsDataSource1;
-        
-        /// <summary>
         /// boxRecipe control.
         /// </summary>
         /// <remarks>
@@ -58,13 +40,13 @@ namespace FoodTrackerApp {
         protected global::System.Web.UI.WebControls.Button btnRecipe;
         
         /// <summary>
-        /// HyperLink1 control.
+        /// hpFoodList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.HyperLink hpFoodList;
         
         /// <summary>
         /// boxEmail control.
