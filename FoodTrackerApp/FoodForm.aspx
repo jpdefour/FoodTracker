@@ -15,12 +15,11 @@
     </div>
         <br />
         <br />
-        <asp:GridView ID="viewFoods" runat="server" AutoGenerateColumns="False" DataKeyNames="foodID" DataSourceID="FoodsDataSource" Height="461px" style="margin-left: 0px; margin-top: 0px" Width="1150px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderWidth="1px" CellPadding="3" BorderStyle="None" CellSpacing="2" AllowPaging="True" AllowSorting="True">
+        <asp:GridView ID="viewFoods" runat="server" AutoGenerateColumns="False" DataKeyNames="foodID" DataSourceID="FoodsDataSource" Height="461px" style="margin-left: 0px; margin-top: 0px" Width="1150px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderWidth="1px" CellPadding="3" BorderStyle="None" CellSpacing="2" AllowPaging="True" AllowSorting="True" OnSelectedIndexChanged="viewFoods_SelectedIndexChanged">
             <Columns>
                 <asp:BoundField DataField="foodName" HeaderText="Food" SortExpression="foodName" />
                 <asp:BoundField DataField="quantity" HeaderText="Quantity" SortExpression="quantity" />
                 <asp:BoundField DataField="storageEnvironment" HeaderText="Storage Environment" SortExpression="storageEnvironment" />
-                <asp:ButtonField ButtonType="Image" CommandName="Select" HeaderText="Favorite" ShowHeader="True" Text="Favorite" ImageUrl="~/Images/star.png" CausesValidation="True" InsertVisible="False" />
                 <asp:CommandField ShowEditButton="True" />
                 <asp:CommandField ShowDeleteButton="True" />
                 
@@ -48,8 +47,7 @@
 
         <asp:SqlDataSource ID="FoodsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:FTConnStr %>" 
             SelectCommand="SELECT * FROM [Foods] WHERE [foodID] IN (SELECT [Contains].[foodID] FROM [Contains] WHERE [Contains].[username] = @strUserName)" 
-            DeleteCommand="DELETE FROM [Foods] WHERE [foodID] = @foodID;
-DELETE FROM [Contains] WHERE [foodID] = @foodID;" 
+            DeleteCommand="DELETE FROM [Foods] WHERE [foodID] = @foodID; DELETE FROM [Contains] WHERE [foodID] = @foodID;" 
             InsertCommand="INSERT INTO [Foods] ([foodID], [foodName], [quantity], [storageEnvironment]) VALUES (@foodID, @foodName, @quantity, @storageEnvironment)" 
             UpdateCommand="UPDATE [Foods] SET [foodName] = @foodName, [quantity] = @quantity, [storageEnvironment] = @storageEnvironment WHERE [foodID] = @foodID">
             <DeleteParameters>
