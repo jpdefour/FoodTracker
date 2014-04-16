@@ -71,47 +71,53 @@ namespace FoodTrackerApp
 
         protected void btnEmail_Click(object sender, EventArgs e)
         {
-            dtFood = taFood.getFoodByFoodID(foodID);
-            FoodTrackerData.FoodsRow rowFood = dtFood[0];
-
             dtMeals = taMeals.getMealsbyFoodID(foodID);
 
-            FoodTrackerData.MealsRow rowMeals;
-
-            String strRecipe = "You need a recipe first";
 
             if (dtMeals.Count > 0)
             {
+
+                dtFood = taFood.getFoodByFoodID(foodID);
+                FoodTrackerData.FoodsRow rowFood = dtFood[0];
+                FoodTrackerData.MealsRow rowMeals;
+
+                String strRecipe = "You need a recipe first";
+
+
+
+
                 rowMeals = dtMeals[0];
 
                 strRecipe = rowMeals["recipe"].ToString();
+
+
+
+                SmtpClient m_clientSmtp;
+
+                //setup smtp client
+                m_clientSmtp = new SmtpClient("smtp.gmail.com");
+
+                m_clientSmtp.Port = 587;
+                m_clientSmtp.UseDefaultCredentials = false;
+                m_clientSmtp.Credentials = new NetworkCredential("foodtracker123", "foodtracker1234");
+                m_clientSmtp.EnableSsl = true;
+
+                //setup mail
+                MailMessage msgMail = new MailMessage();
+
+                msgMail.From = new MailAddress("foodtracker123@gmail.com");
+
+                msgMail.Subject = "Your Recipe is here! The recipe for " + rowFood["foodName"].ToString() + " from " + username + " at FoodTracker";
+
+                msgMail.Body = strRecipe;
+
+                //send test ads
+                msgMail.To.Add(boxEmail.Text);
+
+                m_clientSmtp.Send(msgMail);
+
+                msgMail.To.Clear();
             }
-
-            SmtpClient m_clientSmtp;
-
-            //setup smtp client
-            m_clientSmtp = new SmtpClient("smtp.gmail.com");
-
-            m_clientSmtp.Port = 587;
-            m_clientSmtp.UseDefaultCredentials = false;
-            m_clientSmtp.Credentials = new NetworkCredential("foodtracker123", "foodtracker1234");
-            m_clientSmtp.EnableSsl = true;
-
-            //setup mail
-            MailMessage msgMail = new MailMessage();
-
-            msgMail.From = new MailAddress("foodtracker123@gmail.com");
-
-            msgMail.Subject = "Your Recipe is here! The recipe for " + rowFood["foodName"].ToString() + " from " + username;
-
-            msgMail.Body = strRecipe;
-
-            //send test ads
-            msgMail.To.Add(boxEmail.Text);
-
-            m_clientSmtp.Send(msgMail);
-
-            msgMail.To.Clear();
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
