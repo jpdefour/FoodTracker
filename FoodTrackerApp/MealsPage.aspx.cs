@@ -114,6 +114,12 @@ namespace FoodTrackerApp
             msgMail.To.Clear();
         }
 
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session["username"] = null;
+            Response.Redirect("HomePage.aspx");
+        }
+
 
     }
 }

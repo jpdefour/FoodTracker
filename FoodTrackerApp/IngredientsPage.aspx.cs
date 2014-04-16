@@ -53,5 +53,11 @@ namespace FoodTrackerApp
             }
         }
 
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session["username"] = null;
+            Response.Redirect("HomePage.aspx");
+        }
+
     }
 }

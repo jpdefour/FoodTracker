@@ -77,7 +77,7 @@ DELETE FROM [Contains] WHERE [foodID] = @foodID;"
         <asp:TextBox ID="StorageEnvironment" runat="server" placeholder="Storage Environment"></asp:TextBox>
         <asp:Button ID="btnAddFood" runat="server" OnClick="btnAddFood_Click" Text="Add Food" />
         <p>
-            <asp:HyperLink ID="HyperLink1" runat="server">Logout</asp:HyperLink>
+            <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
         </p>
     </form>
 </body>

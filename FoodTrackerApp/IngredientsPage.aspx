@@ -49,8 +49,9 @@
         <asp:TextBox ID="boxIngredientQuantity" runat="server" placeholder="Quantity"></asp:TextBox>
         <asp:Button ID="Button1" runat="server" Text="Add Ingredient" OnClick="Button1_Click" />
         <p>
-            <asp:HyperLink ID="HyperLink1" runat="server">Logout</asp:HyperLink>
+            <asp:HyperLink ID="hpFoodList" NavigateUrl="FoodForm.aspx" runat="server">Go back to your foods</asp:HyperLink>
         </p>
+        <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
     </form>
 </body>
 </html>
