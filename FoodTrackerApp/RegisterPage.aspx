@@ -10,15 +10,23 @@
 <body>
     <form id="RegisterForm" runat="server">
     <div>
+        <!--<asp:Image id="foodTrackerLogo" ImageUrl="images/foodtracker_small.png" runat="server"/>-->
+    </div>
+    <div>
     
-        <h2>Create a new account!</h2><br />
+        <img src="images/foodtracker.png" /><br /><br />
+        Hello new user!
+        <br />
+        Get started by registering for a new account.
+        <br />
+        <br />
     
     </div>
         Username
-        <asp:TextBox ID="NewUser" runat="server" placeholder="Username"></asp:TextBox>
+        <asp:TextBox ID="NewUser" runat="server" placeholder="New Username"></asp:TextBox>
         <br />
         Password
-        <asp:TextBox ID="NewPass" runat="server" placeholder="Password" textmode="Password"></asp:TextBox>
+        <asp:TextBox ID="NewPass" runat="server" placeholder="New Password" textmode="Password"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="btnRegister" runat="server" OnClick="Button1_Click" Text="Register" />

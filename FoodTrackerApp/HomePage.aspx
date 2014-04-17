@@ -12,17 +12,17 @@
     <div>
     
         <img src="images/foodtracker.png" /><br /><br />
-        Log in to see your foods!
-
+        Welcome to FoodTracker! Login to view your food list.
+        <br />
         <br />
     
-        <asp:Label ID="lblUsername" runat="server" Text="Username"></asp:Label>
-        &nbsp;<asp:TextBox ID="boxUsername" runat="server" placeholder="Username"></asp:TextBox>
+        <asp:Label ID="lblUsername" runat="server" Text="Username:"></asp:Label>
+        <asp:TextBox ID="boxUsername" runat="server" placeholder="Username"></asp:TextBox>
         <br />
     
     </div>
-        <asp:Label ID="lblPassword" runat="server" Text="Password" placeholder="Password"></asp:Label>
-         &nbsp;<asp:TextBox ID="boxPassword" runat="server" placeholder="Password" textmode="Password"></asp:TextBox>
+        <asp:Label ID="lblPassword" runat="server" Text="Password:"></asp:Label>&nbsp;
+         <asp:TextBox ID="boxPassword" runat="server" placeholder="Password" textmode="Password"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="Button1_Click" />

@@ -22,6 +22,15 @@ namespace FoodTrackerApp {
         protected global::System.Web.UI.HtmlControls.HtmlForm RegisterForm;
         
         /// <summary>
+        /// foodTrackerLogo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image foodTrackerLogo;
+        
+        /// <summary>
         /// NewUser control.
         /// </summary>
         /// <remarks>

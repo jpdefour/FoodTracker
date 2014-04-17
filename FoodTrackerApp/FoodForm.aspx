@@ -4,13 +4,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <title></title>
 </head>
 <body>
     <form id="FoodList" runat="server" style="align-content:center;">
     <div>
     
-        <asp:Label ID="Label1" runat="server" Text="Food List" Font-Size="XX-Large"></asp:Label>
+        <img src="images/foodlist.png" />
       
     </div>
         <br />

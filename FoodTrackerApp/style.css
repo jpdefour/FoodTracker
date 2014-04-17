@@ -1,20 +1,25 @@
 ﻿body {
-    background-image: url(images/background.png);
+    background-image: url(images/background2.png);
     text-align: center;
+    color: #ffffff;
+    font-family:Verdana;
 
 }
 
-#boxUsername, #boxPassword {
-border:2px solid white;
-border-radius:2px;
+#foodTrackerLogo {
+    top: 0px;
+    left: 0px;
+    position: fixed;
+
 }
 
-#boxUsername, #boxPassword {
+#boxUsername, #boxPassword, #NewUser, #NewPass, #FoodName, #Quantity, #StorageEnvironment, #boxRecipe, #boxEmail {
 border:2px solid;
+border-color:#473823;
 border-radius:5px;
 }
 
-#btnLogin, #btnRegister {
+#btnLogin, #btnRegister, #btnRegister, #btnLogin, #btnAddFood, #btnLogout, #btnRecipe, #btnEmail {
 	-moz-box-shadow:inset 0px 0px 5px 1px #000000;
 	-webkit-box-shadow:inset 0px 0px 5px 1px #000000;
 	box-shadow:inset 0px 0px 5px 1px #000000;
@@ -49,16 +54,34 @@ border-radius:5px;
 	text-shadow:0px 0px 0px #ffffff;
     }
 
-#btnLogin:hover, #btnRegister:hover {
+#btnLogin:hover, #btnRegister:hover, #btnLogout:hover, #btnAddFood:hover, #btnRecipe:hover, #btnEmail:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c99878), color-stop(1, #665237) );
 	background:-moz-linear-gradient( center top, #c99878 5%, #665237 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c99878', endColorstr='#665237');
 	background-color:#c99878;
     }
 
-#btnLogin:active, #btnRegister:active {
+#btnLogin:active, #btnRegister:active, #btnLogout:hover, #btnAddFood:hover, #btnRecipe:hover, #btnEmail:hover  {
 	position:relative;
 	top:1px;
     }
+.hpFoodList
+{
+color:#FFFFFF;
+text-decoration: none;
+font-weight:bold;
+}
+.hpFoodList:hover
+{
+background:#c99878;
+color:#000000;
+text-decoration:none;
+}
+.hpFoodList:visited
+{
+background:#ffffff;
+color:#000000;
+text-decoration:none;
+}
 
 /* This button was generated using CSSButtonGenerator.com */
