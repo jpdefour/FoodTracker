@@ -16,7 +16,10 @@
         </div>
         <br />
         <br />
-        <asp:GridView ID="viewIngredients" runat="server" AutoGenerateColumns="False" DataSourceID="IngredientsDataSource" Height="568px" Width="820px" DataKeyNames="ingredientID" AllowPaging="True" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2">
+        <asp:GridView ID="viewIngredients" runat="server" AutoGenerateColumns="False" DataSourceID="IngredientsDataSource" 
+            Height="179px" Width="820px" DataKeyNames="ingredientID" AllowPaging="True" 
+            BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" 
+            CellPadding="3" CellSpacing="2" HorizontalAlign="Center">
             <Columns>
                 <asp:BoundField DataField="ingredientID" HeaderText="ingredientID" SortExpression="ingredientID" InsertVisible="False" ReadOnly="True" Visible="False" />
                 <asp:BoundField DataField="ingredientName" HeaderText="Ingredient" SortExpression="ingredientName" />
