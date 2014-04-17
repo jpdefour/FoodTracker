@@ -4,14 +4,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" style="align-content:center;">
     <div>
     
-        Ingredients<br />
+        <img src="images/ingredients.png" />
+
         </div>
+        <br />
+        <br />
         <asp:GridView ID="viewIngredients" runat="server" AutoGenerateColumns="False" DataSourceID="IngredientsDataSource" Height="568px" Width="820px" DataKeyNames="ingredientID" AllowPaging="True" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2">
             <Columns>
                 <asp:BoundField DataField="ingredientID" HeaderText="ingredientID" SortExpression="ingredientID" InsertVisible="False" ReadOnly="True" Visible="False" />
@@ -49,7 +53,7 @@
         <asp:TextBox ID="boxIngredientQuantity" runat="server" placeholder="Quantity"></asp:TextBox>
         <asp:Button ID="Button1" runat="server" Text="Add Ingredient" OnClick="Button1_Click" />
         <p>
-            <asp:HyperLink ID="hpFoodList" NavigateUrl="FoodForm.aspx" runat="server">Go back to your foods</asp:HyperLink>
+            <asp:HyperLink ID="hpFoodList" NavigateUrl="FoodForm.aspx" runat="server" CssClass="hpFoodList">Go back to your foods</asp:HyperLink>
         </p>
         <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
     </form>

@@ -13,13 +13,13 @@
 
 }
 
-#boxUsername, #boxPassword, #NewUser, #NewPass, #FoodName, #Quantity, #StorageEnvironment, #boxRecipe, #boxEmail {
+#boxUsername, #boxPassword, #NewUser, #NewPass, #FoodName, #Quantity, #StorageEnvironment, #boxRecipe, #boxEmail, #boxIngredientName, #boxIngredientQuantity {
 border:2px solid;
 border-color:#473823;
 border-radius:5px;
 }
 
-#btnLogin, #btnRegister, #btnRegister, #btnLogin, #btnAddFood, #btnLogout, #btnRecipe, #btnEmail {
+#btnLogin, #btnRegister, #btnRegister, #btnLogin, #btnAddFood, #btnLogout, #btnRecipe, #btnEmail, #Button1 {
 	-moz-box-shadow:inset 0px 0px 5px 1px #000000;
 	-webkit-box-shadow:inset 0px 0px 5px 1px #000000;
 	box-shadow:inset 0px 0px 5px 1px #000000;
@@ -54,14 +54,14 @@ border-radius:5px;
 	text-shadow:0px 0px 0px #ffffff;
     }
 
-#btnLogin:hover, #btnRegister:hover, #btnLogout:hover, #btnAddFood:hover, #btnRecipe:hover, #btnEmail:hover {
+#btnLogin:hover, #btnRegister:hover, #btnLogout:hover, #btnAddFood:hover, #btnRecipe:hover, #btnEmail:hover, #Button1:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c99878), color-stop(1, #665237) );
 	background:-moz-linear-gradient( center top, #c99878 5%, #665237 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c99878', endColorstr='#665237');
 	background-color:#c99878;
     }
 
-#btnLogin:active, #btnRegister:active, #btnLogout:hover, #btnAddFood:hover, #btnRecipe:hover, #btnEmail:hover  {
+#btnLogin:active, #btnRegister:active, #btnLogout:hover, #btnAddFood:hover, #btnRecipe:hover, #btnEmail:hover, #Button1:hover  {
 	position:relative;
 	top:1px;
     }
