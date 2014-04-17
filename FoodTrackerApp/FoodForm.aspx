@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-    <form id="FoodList" runat="server" style="align-content:center; text-align:center;">
+    <form id="FoodList" runat="server" style="align-content:center;">
     <div>
     
         <asp:Label ID="Label1" runat="server" Text="Food List" Font-Size="XX-Large"></asp:Label>
