@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-    <form id="FoodList" runat="server">
+    <form id="FoodList" runat="server" style="align-content:center; text-align:center;">
     <div>
     
         <asp:Label ID="Label1" runat="server" Text="Food List" Font-Size="XX-Large"></asp:Label>
@@ -15,7 +15,7 @@
     </div>
         <br />
         <br />
-        <asp:GridView ID="viewFoods" runat="server" AutoGenerateColumns="False" DataKeyNames="foodID" DataSourceID="FoodsDataSource" Height="392px" style="margin-left: 0px; margin-top: 0px" Width="1309px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderWidth="1px" CellPadding="3" BorderStyle="None" CellSpacing="2" AllowPaging="True" AllowSorting="True">
+        <asp:GridView ID="viewFoods" runat="server" AutoGenerateColumns="False" DataKeyNames="foodID" DataSourceID="FoodsDataSource" Height="461px" style="margin-left: 0px; margin-top: 0px" Width="1150px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderWidth="1px" CellPadding="3" BorderStyle="None" CellSpacing="2" AllowPaging="True" AllowSorting="True" OnSelectedIndexChanged="viewFoods_SelectedIndexChanged">
             <Columns>
                 <asp:BoundField DataField="foodName" HeaderText="Food" SortExpression="foodName" />
                 <asp:BoundField DataField="quantity" HeaderText="Quantity" SortExpression="quantity" />
@@ -47,8 +47,7 @@
 
         <asp:SqlDataSource ID="FoodsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:FTConnStr %>" 
             SelectCommand="SELECT * FROM [Foods] WHERE [foodID] IN (SELECT [Contains].[foodID] FROM [Contains] WHERE [Contains].[username] = @strUserName)" 
-            DeleteCommand="DELETE FROM [Foods] WHERE [foodID] = @foodID;
-DELETE FROM [Contains] WHERE [foodID] = @foodID;" 
+            DeleteCommand="DELETE FROM [Foods] WHERE [foodID] = @foodID; DELETE FROM [Contains] WHERE [foodID] = @foodID;" 
             InsertCommand="INSERT INTO [Foods] ([foodID], [foodName], [quantity], [storageEnvironment]) VALUES (@foodID, @foodName, @quantity, @storageEnvironment)" 
             UpdateCommand="UPDATE [Foods] SET [foodName] = @foodName, [quantity] = @quantity, [storageEnvironment] = @storageEnvironment WHERE [foodID] = @foodID">
             <DeleteParameters>

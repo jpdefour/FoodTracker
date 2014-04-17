@@ -62,5 +62,10 @@ namespace FoodTrackerApp
             Session["username"] = null;
             Response.Redirect("HomePage.aspx");
         }
+
+        protected void viewFoods_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
