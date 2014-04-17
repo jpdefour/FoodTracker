@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <title></title>
 </head>
 <body>
@@ -22,7 +22,7 @@
     
     </div>
         <asp:Label ID="lblPassword" runat="server" Text="Password" placeholder="Password"></asp:Label>
-        &nbsp;<asp:TextBox ID="boxPassword" runat="server" placeholder="Password" textmode="Password"></asp:TextBox>
+         &nbsp;<asp:TextBox ID="boxPassword" runat="server" placeholder="Password" textmode="Password"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="Button1_Click" />
